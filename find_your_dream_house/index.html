@@ -1,0 +1,489 @@
+<html>
+
+<head>
+  <title>Navigation Bar With Dropdown Menu</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+  <!-- <div id="ribbon">New Nav Bar</div>   -->
+
+  <div id="container">
+
+    <nav>
+      <div id="logo">
+        Company
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"><a href="#">Gallery &nbsp;<i
+              class="fa fa-caret-down"></i></a>
+          <div class="dd">
+            <div id="up_arrow"></div>
+            <ul>
+
+              <li><a href="#">2019</a></li>
+              <li><a href="#">2018</a></li>
+              <li><a href="#">2017</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li class="dropdown"><a href="#">Others &nbsp;<i class="fa fa-caret-down"></i> </a>
+          <div class="dd">
+            <div id="u_a_c">
+              <div id="up_arrow"></div>
+            </div>
+            <ul>
+
+              <li><a href="#">DOCS</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">PROJECTS</a></li>
+            </ul>
+          </div>
+      </ul>
+    </nav>
+  </div>
+
+
+  <!-- main_img_html -->
+  <div class="main_div">
+    <div id="main_div_img">
+      <img src="main_img.jpg" alt="">
+    </div>
+    <div class="heading_div">
+      <h1>Find your next dream house</h1>
+    </div>
+  </div>
+
+
+  <!-- searching house box html-->
+  <div class="searching_box">
+    <div class="searching_input">
+      <div class="input_heading">
+        <h1>Location</h1>
+      </div>
+      <div class="input_value">
+        <select class="select_input" name="location" id="location">
+          <option value="None">Location</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Bangalore">Bangalore</option>
+        </select>
+      </div>
+    </div>
+    <div class="searching_input">
+      <div class="input_heading">
+        <h1>Price</h1>
+      </div>
+      <div class="input_value">
+        <select class="select_input" name="Price" id="price">
+          <option value="None">Price range</option>
+          <option value="1000000-2000000">1000000-2000000</option>
+          <option value="2000000-4000000">2000000-4000000</option>
+          <option value="4000000-8000000">4000000-8000000</option>
+          <option value="8000000-10000000">8000000-10000000</option>
+          <option value="10000000">>=10000000</option>
+        </select>
+      </div>
+    </div>
+    <div class="searching_input">
+      <div class="input_heading">
+        <h1>House Type</h1>
+      </div>
+      <div class="input_value">
+        <select class="select_input" name="House-type" id="house-type">
+          <option value="House-type">Enter type</option>
+          <option value="For Rent">For Rent</option>
+          <option value="For Sale">For Sale</option>
+        </select>
+      </div>
+    </div>
+    <div class="searching_input">
+      <div class="input_heading">
+        <h1>BHK</h1>
+      </div>
+      <div class="input_value">
+        <select class="select_input" name="BHK" id="BHK">
+          <option value="None">Bedrooms</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+    </div>
+    <div class="searching_input">
+      <button id="search_button" onclick="search()">Search Now</button>
+    </div>
+  </div>
+
+  <div class="properties_heading">
+    <h3>FEATURED</h3>
+    <H1>PROPERTIES</H1>
+    <hr>
+  </div>
+
+  <div class="properties_box">
+
+    <div class="properties">
+      <div class="card">
+        <div class="card_img">
+          <img src="h1.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="container">
+          <h4><b>Country Style House with beautiful garden and terrace</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <div class="about_properties">
+          <div class="icons">
+            <img src="rupees img.jpg" alt="">
+            <h2>100000</h2>
+          </div>
+          <div class="icons">
+            <img src="area img.avif" alt="">
+            <h2>2000 sqft</h2>
+          </div>
+          <div class="icons">
+            <img src="bed_img.png" alt="">
+            <h2>3</h2>
+          </div>
+        </div>
+        <div class="buy_now">
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="properties">
+      <div class="card">
+        <div class="card_img">
+          <img src="h2.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="container">
+          <h4><b>Country Style House with beautiful garden and terrace</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <div class="about_properties">
+          <div class="icons">
+            <img src="rupees img.jpg" alt="">
+            <h2>100000</h2>
+          </div>
+          <div class="icons">
+            <img src="area img.avif" alt="">
+            <h2>2000 sqft</h2>
+          </div>
+          <div class="icons">
+            <img src="bed_img.png" alt="">
+            <h2>3</h2>
+          </div>
+        </div>
+        <div class="buy_now">
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="properties">
+      <div class="card">
+        <div class="card_img">
+          <img src="h3.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="container">
+          <h4><b>Country Style House with beautiful garden and terrace</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <div class="about_properties">
+          <div class="icons">
+            <img src="rupees img.jpg" alt="">
+            <h2>100000</h2>
+          </div>
+          <div class="icons">
+            <img src="area img.avif" alt="">
+            <h2>2000 sqft</h2>
+          </div>
+          <div class="icons">
+            <img src="bed_img.png" alt="">
+            <h2>3</h2>
+          </div>
+        </div>
+        <div class="buy_now">
+          <button>Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="properties_box properties_box2">
+
+    <div class="properties">
+      <div class="card">
+        <div class="card_img">
+          <img src="h4.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="container">
+          <h4><b>Country Style House with beautiful garden and terrace</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <div class="about_properties">
+          <div class="icons">
+            <img src="rupees img.jpg" alt="">
+            <h2>100000</h2>
+          </div>
+          <div class="icons">
+            <img src="area img.avif" alt="">
+            <h2>2000 sqft</h2>
+          </div>
+          <div class="icons">
+            <img src="bed_img.png" alt="">
+            <h2>3</h2>
+          </div>
+        </div>
+        <div class="buy_now">
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="properties">
+      <div class="card">
+        <div class="card_img">
+          <img src="h5.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="container">
+          <h4><b>Country Style House with beautiful garden and terrace</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <div class="about_properties">
+          <div class="icons">
+            <img src="rupees img.jpg" alt="">
+            <h2>100000</h2>
+          </div>
+          <div class="icons">
+            <img src="area img.avif" alt="">
+            <h2>2000 sqft</h2>
+          </div>
+          <div class="icons">
+            <img src="bed_img.png" alt="">
+            <h2>3</h2>
+          </div>
+        </div>
+        <div class="buy_now">
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="properties">
+      <div class="card">
+        <div class="card_img">
+          <img src="h6.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="container">
+          <h4><b>Country Style House with beautiful garden and terrace</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+        <div class="about_properties">
+          <div class="icons">
+            <img src="rupees img.jpg" alt="">
+            <h2>100000</h2>
+          </div>
+          <div class="icons">
+            <img src="area img.avif" alt="">
+            <h2>2000 sqft</h2>
+          </div>
+          <div class="icons">
+            <img src="bed_img.png" alt="">
+            <h2>3</h2>
+          </div>
+        </div>
+        <div class="buy_now">
+          <button>Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="properties_heading properties_heading2">
+    <h3>Our Top</h3>
+    <H1>Agents</H1>
+    <hr>
+  </div>
+
+  <div class="agents_box">
+
+    <div class="agents">
+      <div class="card">
+        <div class="card_img">
+          <img src="ag1.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="about_agents">
+          <h2>Rishi Raj</h2>
+          <p>Real Estate Agents</p>
+          <h4>Experience: 5+ year</h4>
+          <h4>City: Darbhanga</h4>
+        </div>
+        <div class="agents_contact">
+          <div class="Phone">
+            <div class="phone_icon">
+              <img src="call img.jpg" alt="">
+            </div>
+            <div class="phone_no">
+              <h2>+91 8976453246</h2>
+            </div>
+          </div>
+          <div class="Email_address">
+            <div class="email_icon">
+              <img src="email img.webp" alt="">
+            </div>
+            <div class="email">
+              <h2>rishi@gmail.com</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="agents">
+      <div class="card">
+        <div class="card_img">
+          <img src="ag2.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="about_agents">
+          <h2>Miden Topno</h2>
+          <p>Real Estate Agents</p>
+          <h4>Experience: 5+ year</h4>
+          <h4>City: Bangalore</h4>
+        </div>
+        <div class="agents_contact">
+          <div class="Phone">
+            <div class="phone_icon">
+              <img src="call img.jpg" alt="">
+            </div>
+            <div class="phone_no">
+              <h2>+91 8976453246</h2>
+            </div>
+          </div>
+          <div class="Email_address">
+            <div class="email_icon">
+              <img src="email img.webp" alt="">
+            </div>
+            <div class="email">
+              <h2>miden@gmail.com</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="agents">
+      <div class="card">
+        <div class="card_img">
+          <img src="ag1.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="about_agents">
+          <h2>Maitrey Yadav</h2>
+          <p>Real Estate Agents</p>
+          <h4>Experience: 5+ year</h4>
+          <h4>City: Delhi</h4>
+        </div>
+        <div class="agents_contact">
+          <div class="Phone">
+            <div class="phone_icon">
+              <img src="call img.jpg" alt="">
+            </div>
+            <div class="phone_no">
+              <h2>+91 8976453246</h2>
+            </div>
+          </div>
+          <div class="Email_address">
+            <div class="email_icon">
+              <img src="email img.webp" alt="">
+            </div>
+            <div class="email">
+              <h2>maitrey@gmail.com</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="agents">
+      <div class="card">
+        <div class="card_img">
+          <img src="ag2.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="about_agents">
+          <h2>Bittu Kumar</h2>
+          <p>Real Estate Agents</p>
+          <h4>Experience: 5+ year</h4>
+          <h4>City:Mumbai</h4>
+        </div>
+        <div class="agents_contact">
+          <div class="Phone">
+            <div class="phone_icon">
+              <img src="call img.jpg" alt="">
+            </div>
+            <div class="phone_no">
+              <h2>+91 8976453246</h2>
+            </div>
+          </div>
+          <div class="Email_address">
+            <div class="email_icon">
+              <img src="email img.webp" alt="">
+            </div>
+            <div class="email">
+              <h2>bittu@gmail.com</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="company_contact" >
+      <div class="company_phone_div">
+        <div class="company_phone">
+          <div class="phone_icon">
+            <img src="location.jpg" alt="">
+          </div>
+          <div class="company_phone_no">
+            <h2>21 Revolve Street</h2>
+            <h3>Paris, France</h3>
+          </div>
+        </div>
+        <div class="company_phone">
+          <div class="phone_icon">
+            <img src="phone.webp" alt="">
+          </div>
+          <div class="company_phone_no">
+            <h2>+91 8976453246</h2>
+          </div>
+        </div>
+       <div class="company_phone">
+          <div class="phone_icon">
+            <img src="email img.webp" alt="">
+          </div>
+          <div class="company_phone_no">
+            <h2>support@company.com</h2>
+          </div>
+        </div>
+      </div>
+     </div>
+    <div class="about_company">
+      <h1>About Company</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus ex excepturi sint ad impedit? Distinctio quidem nobis culpa animi accusantium voluptatibus illum ut commodi dignissimos laboriosam, ratione, officiis earum tempore, dolore vel repudiandae. Quisquam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore in perferendis consectetur impedit cumque, eum totam quaerat blanditiis labore? Dolorum!</p>
+     </div>
+     
+  </div>
+
+
+   
+
+
+
+</body>
+
+</html>
